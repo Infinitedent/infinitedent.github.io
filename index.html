@@ -4,15 +4,54 @@
   <meta charset="UTF-8" />
   <title>Infinite Multispeciality Dent | Dental Clinic in Belathur, KR Puram</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Infinite Multispeciality Dent - gentle, modern dental care for the whole family in Belathur, Krishnarajapuram, Bengaluru. Root canal, cleaning, cosmetic and kids dentistry."
-  />
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Infinite Multispeciality Dent in Belathur, Krishnarajapuram – family-friendly dental clinic offering root canal treatment, cleaning & polishing, cosmetic dentistry and kids' dentistry." />
+  <meta name="keywords" content="Infinite Multispeciality Dent, dental clinic Belathur, dentist KR Puram, root canal treatment, teeth cleaning, kids dentist Bengaluru" />
+  <link rel="canonical" href="https://infinitedent.github.io/infinitemultispecialitydent.github.io/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Infinite Multispeciality Dent | Dental Clinic in Belathur, KR Puram" />
+  <meta property="og:description" content="Gentle, modern dental care for the whole family. Root canals, cleaning & polishing, cosmetic dentistry and kids' dentistry." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://infinitedent.github.io/infinitemultispecialitydent.github.io/" />
+  <meta property="og:image" content="https://infinitedent.github.io/infinitemultispecialitydent.github.io/logo-icon.png" />
+
+  <!-- Local Business Schema (Google SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Infinite Multispeciality Dent",
+    "image": "https://infinitedent.github.io/infinitemultispecialitydent.github.io/logo-icon.png",
+    "url": "https://infinitedent.github.io/infinitemultispecialitydent.github.io/",
+    "telephone": "+918050029791",
+    "email": "infinitedent2025@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2nd Floor, ITI Muniyappa Building, 2nd Cross Road, Belathur, Krishnarajapuram",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560067",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+      ],
+      "opens": "09:30",
+      "closes": "20:30"
+    }],
+    "priceRange": "$$"
+  }
+  </script>
+
   <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -20,16 +59,14 @@
       --primary-light: #14b8a6;
       --accent: #f97316;
       --bg: #f4f6fb;
-      --text: #111827;
+      --text: #1f2933;
       --muted: #6b7280;
       --card-bg: #ffffff;
       --radius-lg: 1.25rem;
-      --shadow-soft: 0 18px 40px rgba(15, 118, 110, 0.16);
+      --shadow-soft: 0 18px 40px rgba(15, 118, 110, 0.15);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -37,18 +74,11 @@
         "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
 
     .container {
       max-width: 1120px;
@@ -56,42 +86,34 @@
       padding: 0 1.25rem;
     }
 
-    /* Top info bar */
-
+    /* Top bar */
     .top-bar {
       background: var(--primary);
       color: #ffffff;
-      font-size: 0.84rem;
-      padding: 0.35rem 0;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
     }
-
     .top-bar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.75rem;
-      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-
     .top-bar span {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
       white-space: nowrap;
     }
-
-    .top-bar strong {
-      font-weight: 600;
-    }
+    .top-bar strong { font-weight: 600; }
 
     /* Header / nav */
-
     header {
       background: #ffffff;
       box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
       position: sticky;
       top: 0;
-      z-index: 40;
+      z-index: 50;
     }
 
     .nav {
@@ -105,15 +127,16 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.7rem;
+      gap: 0.6rem;
     }
 
     .brand-logo-img {
       width: 52px;
       height: 52px;
       border-radius: 999px;
-      object-fit: cover;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+      object-fit: contain;
+      box-shadow: 0 8px 22px rgba(15, 118, 110, 0.35);
+      background: #ffffff;
     }
 
     .brand-text-title {
@@ -124,7 +147,7 @@
     }
 
     .brand-text-sub {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       color: var(--muted);
       margin-top: -2px;
     }
@@ -132,17 +155,15 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.3rem;
+      gap: 1.25rem;
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
     }
-
     nav li a {
       position: relative;
       padding-bottom: 0.1rem;
     }
-
     nav li a::after {
       content: "";
       position: absolute;
@@ -153,18 +174,30 @@
       background: var(--primary);
       transition: width 0.18s ease-out;
     }
+    nav li a:hover::after { width: 100%; }
 
-    nav li a:hover::after {
-      width: 100%;
+    /* Mobile nav */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: #f3f4f6;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.9rem;
+      cursor: pointer;
     }
 
     /* Buttons */
-
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.55rem 1.25rem;
+      padding: 0.55rem 1.2rem;
       border-radius: 999px;
       font-size: 0.9rem;
       font-weight: 500;
@@ -176,48 +209,40 @@
       text-align: center;
       white-space: nowrap;
     }
-
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--primary-light));
       color: #ffffff;
-      box-shadow: 0 14px 32px rgba(20, 184, 166, 0.35);
+      box-shadow: 0 14px 30px rgba(20, 184, 166, 0.35);
     }
-
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 18px 40px rgba(20, 184, 166, 0.45);
     }
-
     .btn-outline {
-      border: 1px solid rgba(148, 163, 184, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.8);
       background: #ffffff;
       color: var(--text);
     }
-
     .btn-outline:hover {
       background: #f9fafb;
       transform: translateY(-1px);
     }
-
     .btn-pill-sm {
-      padding: 0.4rem 0.95rem;
+      padding: 0.4rem 0.9rem;
       font-size: 0.8rem;
     }
 
     /* Hero */
-
     .hero {
       background: radial-gradient(circle at top left, #ecfeff, #e0f2fe 40%, #f4f6fb);
       padding: 2.4rem 0 2.8rem;
     }
-
     .hero-inner {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 2.3rem;
+      gap: 2.2rem;
       align-items: center;
     }
-
     .hero-pill {
       display: inline-flex;
       align-items: center;
@@ -229,73 +254,58 @@
       font-size: 0.75rem;
       margin-bottom: 0.7rem;
     }
-
     .hero-pill-dot {
       width: 8px;
       height: 8px;
       border-radius: 999px;
       background: #22c55e;
     }
-
     .hero-title {
       font-size: clamp(2rem, 3vw, 2.4rem);
       font-weight: 700;
       margin: 0 0 0.6rem;
       letter-spacing: -0.03em;
     }
-
-    .hero-title span {
-      color: var(--primary);
-    }
-
+    .hero-title span { color: var(--primary); }
     .hero-subtitle {
       font-size: 0.98rem;
       color: var(--muted);
       max-width: 30rem;
       margin-bottom: 1.2rem;
     }
-
     .hero-ctas {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 1.1rem;
+      gap: 0.65rem;
+      margin-bottom: 1rem;
     }
-
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.4rem;
+      gap: 1.2rem;
       font-size: 0.8rem;
       color: var(--muted);
     }
-
-    .hero-meta-item span {
-      display: block;
-    }
-
+    .hero-meta-item span { display: block; }
     .hero-meta-label {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-
     .hero-meta-value {
       font-weight: 600;
       color: var(--text);
     }
-
     .hero-card {
       background: var(--card-bg);
-      border-radius: 1.6rem;
-      padding: 1.6rem 1.4rem 1.4rem;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1.4rem;
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
     }
-
     .hero-card-tag {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
@@ -305,32 +315,27 @@
       color: var(--accent);
       margin-bottom: 0.8rem;
     }
-
     .hero-card h2 {
       margin: 0 0 0.6rem;
       font-size: 1.1rem;
     }
-
     .hero-card p {
       margin: 0 0 0.9rem;
       font-size: 0.9rem;
       color: var(--muted);
     }
-
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
       font-size: 0.8rem;
     }
-
     .badge {
       padding: 0.35rem 0.7rem;
       border-radius: 999px;
       background: #f9fafb;
-      border: 1px dashed rgba(148, 163, 184, 0.7);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
     }
-
     .hero-card-decoration {
       position: absolute;
       right: -40px;
@@ -339,20 +344,15 @@
       height: 150px;
       border-radius: 999px;
       background: radial-gradient(circle at 30% 30%, #ecfeff, var(--primary));
-      opacity: 0.16;
+      opacity: 0.15;
     }
 
     /* Section base */
-
-    section {
-      padding: 2.3rem 0;
-    }
-
+    section { padding: 2.2rem 0; }
     .section-header {
       text-align: center;
-      margin-bottom: 1.9rem;
+      margin-bottom: 1.8rem;
     }
-
     .section-kicker {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -360,13 +360,11 @@
       color: var(--primary);
       margin-bottom: 0.3rem;
     }
-
     .section-title {
       font-size: 1.4rem;
       font-weight: 600;
       margin: 0;
     }
-
     .section-subtitle {
       font-size: 0.9rem;
       color: var(--muted);
@@ -375,148 +373,62 @@
     }
 
     /* About */
-
     .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.9rem;
+      gap: 1.8rem;
       align-items: center;
     }
-
     .about-text p {
       font-size: 0.94rem;
       color: var(--muted);
       margin-top: 0;
       margin-bottom: 0.9rem;
     }
-
     .about-highlights {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 0.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
       margin-top: 0.4rem;
     }
-
     .about-highlight {
       background: #ffffff;
-      border-radius: 0.95rem;
-      padding: 0.75rem 0.9rem;
+      border-radius: 0.9rem;
+      padding: 0.7rem 0.8rem;
       font-size: 0.83rem;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
     }
-
     .about-highlight-title {
       font-weight: 600;
       margin-bottom: 0.1rem;
     }
-
-    .about-highlight small {
-      color: var(--muted);
-    }
-
+    .about-highlight small { color: var(--muted); }
     .about-card {
       background: #ffffff;
-      border-radius: 1.3rem;
-      padding: 1.25rem;
+      border-radius: 1.25rem;
+      padding: 1.2rem;
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
       font-size: 0.9rem;
     }
-
     .about-location {
       margin-top: 0.6rem;
       font-size: 0.85rem;
       color: var(--muted);
     }
-
-    .about-location strong {
-      color: var(--text);
-    }
-
+    .about-location strong { color: var(--text); }
     .about-actions {
       margin-top: 0.9rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.55rem;
-    }
-
-    /* Doctor section */
-
-    .doctor-card {
-      background: #ffffff;
-      border-radius: 1.3rem;
-      padding: 1.4rem 1.2rem;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.4rem;
-      align-items: center;
-      font-size: 0.9rem;
-    }
-
-    .doctor-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .doctor-title {
-      font-size: 0.9rem;
-      color: var(--primary);
-      font-weight: 500;
-      margin-top: 0.1rem;
-    }
-
-    .doctor-bio {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin: 0.7rem 0 0.8rem;
-    }
-
-    .doctor-tags {
-      display: flex;
-      flex-wrap: wrap;
       gap: 0.5rem;
-      font-size: 0.8rem;
-    }
-
-    .doctor-tag {
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      background: #f9fafb;
-      border: 1px dashed rgba(148, 163, 184, 0.8);
-    }
-
-    .doctor-photo-frame {
-      border-radius: 1.1rem;
-      min-height: 180px;
-      background: radial-gradient(circle at top left, #ecfeff, #e0f2fe, #ccfbf1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .doctor-photo-note {
-      position: absolute;
-      bottom: 0.6rem;
-      left: 0.7rem;
-      right: 0.7rem;
-      font-size: 0.75rem;
-      color: #0f172a;
-      background: rgba(248, 250, 252, 0.86);
-      border-radius: 999px;
-      padding: 0.35rem 0.6rem;
-      text-align: center;
     }
 
     /* Services */
-
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1rem;
     }
-
     .service-card {
       background: #ffffff;
       border-radius: 1rem;
@@ -527,32 +439,27 @@
       flex-direction: column;
       gap: 0.35rem;
     }
-
     .service-title {
       font-weight: 600;
       font-size: 0.95rem;
     }
-
     .service-tag {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.09em;
       color: var(--primary);
     }
-
     .service-note {
       margin-top: 0.2rem;
       color: var(--muted);
     }
 
     /* Why choose us */
-
     .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 1rem;
     }
-
     .why-card {
       background: #ffffff;
       border-radius: 1rem;
@@ -560,26 +467,95 @@
       font-size: 0.86rem;
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
     }
-
     .why-card h3 {
       margin: 0 0 0.3rem;
       font-size: 0.95rem;
     }
-
     .why-card p {
       margin: 0;
       color: var(--muted);
     }
 
-    /* Testimonials */
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1rem;
+    /* Gallery slider (SL1) */
+    .gallery-wrapper {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      background: #000;
+    }
+    .gallery-slider {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%; /* 16:9 */
+    }
+    .gallery-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+      transform: scale(1.02);
+    }
+    .gallery-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .gallery-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: rgba(15, 23, 42, 0.55);
+      color: #ffffff;
+      border-radius: 999px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .gallery-nav:hover { background: rgba(15, 23, 42, 0.75); }
+    .gallery-nav.prev { left: 10px; }
+    .gallery-nav.next { right: 10px; }
+    .gallery-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+    }
+    .gallery-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 1px solid #ffffff;
+      background: transparent;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .gallery-dot.active {
+      background: #ffffff;
+      opacity: 1;
     }
 
-    .testimonial-card {
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .review-card {
       background: #ffffff;
       border-radius: 1rem;
       padding: 1rem;
@@ -587,46 +563,55 @@
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
       border-left: 3px solid var(--primary);
     }
-
-    .testimonial-text {
+    .review-stars {
+      color: #facc15;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+    .review-text {
       margin-bottom: 0.6rem;
       color: var(--muted);
     }
-
-    .testimonial-name {
+    .review-name {
       font-weight: 600;
       font-size: 0.9rem;
     }
-
-    .testimonial-meta {
+    .review-meta {
       font-size: 0.75rem;
       color: var(--muted);
     }
+    .google-rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: #fff7ed;
+      color: #c2410c;
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
 
     /* Contact */
-
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 1.7rem;
     }
-
     .contact-card {
       background: #ffffff;
       border-radius: 1.25rem;
-      padding: 1.25rem;
+      padding: 1.2rem;
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
       font-size: 0.88rem;
     }
-
     .contact-list {
       list-style: none;
-      margin: 0 0 0.9rem;
+      margin: 0 0 0.8rem;
       padding: 0;
       display: grid;
       gap: 0.45rem;
     }
-
     .contact-list li strong {
       font-size: 0.82rem;
       text-transform: uppercase;
@@ -635,11 +620,7 @@
       display: block;
       margin-bottom: 0.05rem;
     }
-
-    .contact-list li span {
-      display: block;
-    }
-
+    .contact-list li span { display: block; }
     .map-frame {
       border-radius: 1.25rem;
       overflow: hidden;
@@ -647,7 +628,6 @@
       background: #dbeafe;
       min-height: 260px;
     }
-
     .map-frame iframe {
       border: 0;
       width: 100%;
@@ -655,123 +635,77 @@
       min-height: 260px;
     }
 
-    .hours-box {
-      margin-top: 0.4rem;
-      padding: 0.55rem 0.75rem;
-      border-radius: 0.8rem;
-      background: #f9fafb;
-      font-size: 0.82rem;
-      color: var(--text);
-      display: inline-block;
-    }
-
     /* Footer */
-
     footer {
       padding: 1rem 0 1.3rem;
       font-size: 0.78rem;
       color: var(--muted);
       text-align: center;
-      background: #ffffff;
-      margin-top: 0.5rem;
     }
-
     footer span {
       color: var(--primary);
       font-weight: 500;
     }
 
-    /* Sticky mobile action bar */
-
-    .mobile-bar {
-      position: fixed;
-      bottom: 0.75rem;
-      left: 0;
-      right: 0;
-      z-index: 50;
-      display: none;
+    /* Scroll animations */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
-
-    .mobile-bar-inner {
-      max-width: 420px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 999px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
-      padding: 0.35rem;
-      display: flex;
-      gap: 0.35rem;
-    }
-
-    .mobile-bar button,
-    .mobile-bar a {
-      flex: 1;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      padding: 0.4rem 0.5rem;
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Responsive */
-
     @media (max-width: 900px) {
       .hero-inner,
       .about-grid,
-      .doctor-card,
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      .hero-inner {
-        gap: 1.7rem;
-      }
-
-      .hero {
-        padding-top: 1.9rem;
-      }
+      .hero-inner { gap: 1.6rem; }
+      .hero { padding-top: 1.7rem; }
 
       nav ul {
-        display: none; /* simple mobile: hide nav menu */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #ffffff;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+        border-radius: 0 0 1rem 1rem;
+        padding: 0.7rem 1rem 0.9rem;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 200px;
+        display: none;
+        z-index: 60;
       }
+      nav ul.show { display: flex; }
 
-      .nav {
-        padding: 0.6rem 0;
-      }
+      .nav-toggle { display: inline-flex; }
 
       .top-bar-inner {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .doctor-photo-frame {
-        min-height: 160px;
-      }
-
-      .mobile-bar {
-        display: block;
-      }
-
-      body {
-        padding-bottom: 3.1rem; /* space for mobile bar */
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-title {
-        font-size: 1.75rem;
-      }
-
+      .hero-title { font-size: 1.7rem; }
       .hero-ctas {
         flex-direction: column;
         align-items: stretch;
       }
 
-      .top-bar {
-        font-size: 0.8rem;
+      .gallery-wrapper {
+        border-radius: 1rem;
       }
+    }
 
-      .brand-text-title {
-        font-size: 1rem;
-      }
+    @media (max-width: 640px) {
+      .brand-text-title { font-size: 0.95rem; }
+      .brand-text-sub { font-size: 0.7rem; }
+      .top-bar { font-size: 0.8rem; }
     }
   </style>
 </head>
@@ -781,10 +715,10 @@
   <div class="top-bar">
     <div class="container top-bar-inner">
       <span>
-        📍 <strong>Infinite Multispeciality Dent</strong> | Belathur, Krishnarajapuram, Bengaluru
+        📍 <strong>Infinite Multispeciality Dent</strong> &nbsp;|&nbsp; Belathur, Krishnarajapuram, Bengaluru
       </span>
       <span>
-        ⏰ <strong>Mon–Sun: 9:30 AM – 8:30 PM</strong>
+        ⏰ Mon–Sun 9:30 AM – 8:30 PM
       </span>
       <span>
         📞 <strong><a href="tel:+918050029791" style="color:#fff;">+91 80500 29791</a></strong>
@@ -796,40 +730,38 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <!-- Use your existing logo image here -->
-        <!-- Replace logo.png with the file name of your clinic logo -->
-        <img
-          src="logo.png"
-          alt="Infinite Multispeciality Dent Logo"
-          class="brand-logo-img"
-        />
+        <img src="logo-icon.png" alt="Infinite Multispeciality Dent Logo" class="brand-logo-img" />
         <div>
           <div class="brand-text-title">Infinite Multispeciality Dent</div>
-          <div class="brand-text-sub">Family Dental Clinic • Belathur</div>
+          <div class="brand-text-sub">Dental Clinic • Belathur</div>
         </div>
       </div>
 
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#doctor">Doctor</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="nav-right">
+        <nav>
+          <ul id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#doctor">Doctor</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-      <a href="https://wa.me/918050029791" target="_blank" rel="noopener" class="btn btn-pill-sm btn-primary">
-        WhatsApp
-      </a>
+        <a href="https://wa.me/918050029791" target="_blank" rel="noopener" class="btn btn-pill-sm btn-primary">
+          WhatsApp
+        </a>
+
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero" id="home">
     <div class="container hero-inner">
-      <div>
+      <div data-animate>
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
           Gentle, modern dental care
@@ -838,16 +770,13 @@
           Keep your family’s <span>smiles healthy</span> & confident.
         </h1>
         <p class="hero-subtitle">
-          Complete dental care under one roof — from routine cleaning and fillings to root canal
-          treatments, cosmetic dentistry and kids’ dentistry.
+          Complete dental care under one roof — from routine cleaning to root canal treatments,
+          cosmetic dentistry and kids’ dentistry.
         </p>
 
         <div class="hero-ctas">
           <a href="tel:+918050029791" class="btn btn-primary">
             📞 Call for Appointment
-          </a>
-          <a href="https://wa.me/918050029791" target="_blank" rel="noopener" class="btn btn-outline">
-            💬 WhatsApp Us
           </a>
           <a href="#contact" class="btn btn-outline">
             📅 Book / Enquire
@@ -862,26 +791,20 @@
             </span>
           </div>
           <div class="hero-meta-item">
-            <span class="hero-meta-label">Clinic Hours</span>
-            <span class="hero-meta-value">
-              Mon–Sun, 9:30 AM – 8:30 PM
-            </span>
-          </div>
-          <div class="hero-meta-item">
             <span class="hero-meta-label">For</span>
             <span class="hero-meta-value">Adults • Kids • Seniors</span>
           </div>
         </div>
       </div>
 
-      <div class="hero-card">
+      <div class="hero-card" data-animate>
         <div class="hero-card-tag">
           🦷 Comprehensive dental care
         </div>
-        <h2>We focus on comfort, clear communication & clean results.</h2>
+        <h2>We focus on comfort, clarity & clean results.</h2>
         <p>
-          From your first visit, we spend time explaining your condition, X-rays and treatment
-          options — so you always feel informed and confident about the care you receive.
+          We explain every step before we start, so you always know what’s happening and feel
+          confident about your treatment.
         </p>
 
         <div class="hero-badges">
@@ -899,47 +822,46 @@
   <!-- About -->
   <section id="about">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <div class="section-kicker">About the clinic</div>
         <h2 class="section-title">Infinite Multispeciality Dent</h2>
         <p class="section-subtitle">
-          A neighbourhood dental clinic in Belathur designed to be clean, calm and kid-friendly, with
-          a focus on patient comfort and transparent communication.
+          A neighbourhood dental clinic designed to be clean, calm and kid-friendly, with a focus
+          on patient comfort and transparent communication.
         </p>
       </div>
 
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text" data-animate>
           <p>
             At Infinite Multispeciality Dent, we believe every patient deserves personalised
             attention. From your first consultation to follow-up visits, we take time to understand
-            your concerns, explain treatment options, and help you choose what’s best for you and
-            your family.
+            your concerns, explain treatment options, and help you choose what’s best for you.
           </p>
           <p>
             Whether you need a root canal, a simple filling, teeth cleaning, or a smile makeover —
-            our goal is to make your dental visits relaxed, clear and as pain-free as possible.
+            our goal is to make dental visits relaxed, clear and pain-free.
           </p>
 
           <div class="about-highlights">
             <div class="about-highlight">
               <div class="about-highlight-title">Family-friendly care</div>
-              <small>Comfortable for kids, parents and seniors.</small>
+              <small>Comfortable for kids, parents & seniors.</small>
             </div>
             <div class="about-highlight">
               <div class="about-highlight-title">Transparent plans</div>
-              <small>We explain procedures & costs before treatment.</small>
+              <small>We explain all procedures & options clearly.</small>
             </div>
             <div class="about-highlight">
               <div class="about-highlight-title">Focus on hygiene</div>
-              <small>Strict sterilisation & a clean, modern setup.</small>
+              <small>Strict sterilisation & clean, modern setup.</small>
             </div>
           </div>
         </div>
 
-        <div class="about-card">
+        <div class="about-card" data-animate>
           <strong>Clinic Address</strong>
-          <p style="margin:0.45rem 0 0.25rem;">
+          <p style="margin:0.4rem 0 0.2rem;">
             2nd Floor, ITI Muniyappa Building,<br />
             2nd Cross Road, Belathur,<br />
             Krishnarajapuram, Bengaluru,<br />
@@ -950,30 +872,24 @@
             📍 <strong>Landmark:</strong> Near Belathur main road
           </div>
 
-          <ul class="contact-list" style="margin-top:0.9rem;">
+          <ul class="contact-list" style="margin-top:0.8rem;">
             <li>
               <strong>Call</strong>
               <span><a href="tel:+918050029791">+91 80500 29791</a></span>
             </li>
             <li>
               <strong>WhatsApp</strong>
-              <span>
-                <a href="https://wa.me/918050029791" target="_blank" rel="noopener">
-                  Chat on WhatsApp
-                </a>
-              </span>
+              <span><a href="https://wa.me/918050029791" target="_blank" rel="noopener">Chat on WhatsApp</a></span>
             </li>
             <li>
               <strong>Email</strong>
-              <span>
-                <a href="mailto:infinitedent2025@gmail.com">infinitedent2025@gmail.com</a>
-              </span>
+              <span><a href="mailto:infinitedent2025@gmail.com">infinitedent2025@gmail.com</a></span>
+            </li>
+            <li>
+              <strong>Timings</strong>
+              <span>Monday to Sunday – 9:30 AM to 8:30 PM</span>
             </li>
           </ul>
-
-          <div class="hours-box">
-            ⏰ <strong>Hours:</strong> Monday – Sunday, 9:30 AM – 8:30 PM
-          </div>
 
           <div class="about-actions">
             <a
@@ -994,42 +910,38 @@
   <!-- Doctor section -->
   <section id="doctor">
     <div class="container">
-      <div class="section-header">
-        <div class="section-kicker">Doctor</div>
-        <h2 class="section-title">Meet your dentist</h2>
+      <div class="section-header" data-animate>
+        <div class="section-kicker">Your dentist</div>
+        <h2 class="section-title">Dr. Karuna – Dental Surgeon</h2>
         <p class="section-subtitle">
-          Gentle, patient and detail-oriented care, with a focus on explaining every step of your
-          treatment.
+          Gentle, patient and detail-oriented – focused on making every visit as stress-free as possible.
         </p>
       </div>
 
-      <div class="doctor-card">
-        <div>
-          <div class="doctor-name">Dr Karuna</div>
-          <div class="doctor-title">Dental Surgeon</div>
-
-          <p class="doctor-bio">
-            Dr Karuna believes that a calm atmosphere, clear communication and gentle approach
-            can change how people feel about visiting the dentist. She takes time to listen to
-            each patient’s concerns, explains treatment options in simple language, and ensures
-            that you are comfortable throughout the procedure.
+      <div class="about-grid">
+        <div class="about-text" data-animate>
+          <p>
+            <strong>Dr. Karuna</strong> is a caring dental surgeon with a strong focus on conservative,
+            tooth-saving treatments like root canal therapy, restorations and preventive care.
           </p>
-
-          <div class="doctor-tags">
-            <span class="doctor-tag">Root Canal Treatments</span>
-            <span class="doctor-tag">Restorative Dentistry</span>
-            <span class="doctor-tag">Cleaning & Polishing</span>
-            <span class="doctor-tag">Kids Dentistry</span>
-          </div>
+          <p>
+            Patients appreciate her calm approach, clear explanations and the time she takes to
+            answer every question before starting treatment.
+          </p>
+          <p>
+            She believes that when patients understand their options, they feel more confident and
+            less anxious in the dental chair – especially children and first-time visitors.
+          </p>
         </div>
 
-        <div class="doctor-photo-frame">
-          <!-- If you have a professional photo, you can place it here instead of this block:
-               <img src="dr-karuna.jpg" alt="Dr Karuna, Dental Surgeon" style="width:100%;height:100%;object-fit:cover;" />
-          -->
-          <div class="doctor-photo-note">
-            Replace this area with a photo of <strong>Dr Karuna</strong> for a more personal touch.
-          </div>
+        <div class="about-card" data-animate>
+          <strong>Why patients like Dr. Karuna</strong>
+          <ul style="padding-left:1.1rem;margin:0.5rem 0 0;font-size:0.88rem;color:var(--muted);">
+            <li>Explains each step during procedures like RCT and fillings.</li>
+            <li>Gentle with injections and pain management.</li>
+            <li>Very patient with kids and anxious patients.</li>
+            <li>Focus on long-term oral health, not just quick fixes.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1038,16 +950,16 @@
   <!-- Services -->
   <section id="services">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <div class="section-kicker">Treatments</div>
         <h2 class="section-title">Dental services under one roof</h2>
         <p class="section-subtitle">
-          From preventive care to restorative and cosmetic treatments, we offer a range of services
-          for all age groups.
+          From preventive care to advanced restorative and cosmetic treatments, we offer a wide
+          range of services for all age groups.
         </p>
       </div>
 
-      <div class="services-grid">
+      <div class="services-grid" data-animate>
         <div class="service-card">
           <div class="service-tag">Pain relief • Tooth saving</div>
           <div class="service-title">Root Canal Treatment (RCT)</div>
@@ -1102,31 +1014,29 @@
   <!-- Why choose us -->
   <section id="why">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <div class="section-kicker">Why patients choose us</div>
         <h2 class="section-title">Care that feels personal, not rushed</h2>
       </div>
 
-      <div class="why-grid">
+      <div class="why-grid" data-animate>
         <div class="why-card">
           <h3>Clear explanations</h3>
           <p>
-            We walk you through your X-rays, diagnosis and treatment plan in simple language before
-            we begin any procedure.
+            We walk you through your X-rays and treatment plan in simple language before we begin.
           </p>
         </div>
         <div class="why-card">
           <h3>Comfort-first approach</h3>
           <p>
-            From anaesthesia to each step of treatment, we aim to keep discomfort minimal and
-            visits stress-free.
+            From anaesthesia to procedure steps, we aim to keep discomfort minimal and visits
+            stress-free.
           </p>
         </div>
         <div class="why-card">
           <h3>Clean & hygienic setup</h3>
           <p>
-            Strict sterilisation protocols and a neat, organised clinic space for your safety and
-            peace of mind.
+            Strict sterilisation protocols and a neat, organised clinic space for your safety.
           </p>
         </div>
         <div class="why-card">
@@ -1140,43 +1050,102 @@
     </div>
   </section>
 
-  <!-- Reviews -->
-  <section id="reviews">
+  <!-- Gallery slider -->
+  <section id="gallery">
     <div class="container">
-      <div class="section-header">
-        <div class="section-kicker">Patient feedback</div>
-        <h2 class="section-title">What patients usually appreciate</h2>
+      <div class="section-header" data-animate>
+        <div class="section-kicker">Gallery</div>
+        <h2 class="section-title">Inside Infinite Multispeciality Dent</h2>
         <p class="section-subtitle">
-          Replace these sample testimonials with your actual Google / Practo / Instagram reviews.
+          A quick look at our clinic interiors and equipment – clean, modern and welcoming.
         </p>
       </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            “I had a root canal done by Dr Karuna and the entire experience was very comfortable.
-            Everything was clearly explained and I felt relaxed throughout the treatment.”
+      <div class="gallery-wrapper" data-animate>
+        <div class="gallery-slider" id="gallerySlider">
+          <div class="gallery-slide active">
+            <img src="gallery-1.jpg" alt="Clinic interior – Infinite Multispeciality Dent" />
           </div>
-          <div class="testimonial-name">Patient Name</div>
-          <div class="testimonial-meta">Root canal treatment</div>
+          <div class="gallery-slide">
+            <img src="gallery-2.jpg" alt="Dental instruments at Infinite Multispeciality Dent" />
+          </div>
+          <div class="gallery-slide">
+            <img src="gallery-3.jpg" alt="Treatment area – Infinite Multispeciality Dent" />
+          </div>
+          <div class="gallery-slide">
+            <img src="gallery-4.jpg" alt="Reception / waiting area – Infinite Multispeciality Dent" />
+          </div>
         </div>
 
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            “The clinic is clean and well maintained. My child was very comfortable and the doctor
-            was extremely patient and friendly.”
+        <button class="gallery-nav prev" type="button" aria-label="Previous photo">&lt;</button>
+        <button class="gallery-nav next" type="button" aria-label="Next photo">&gt;</button>
+
+        <div class="gallery-dots" id="galleryDots">
+          <button class="gallery-dot active" type="button" aria-label="Slide 1"></button>
+          <button class="gallery-dot" type="button" aria-label="Slide 2"></button>
+          <button class="gallery-dot" type="button" aria-label="Slide 3"></button>
+          <button class="gallery-dot" type="button" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Reviews -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <div class="section-kicker">Google reviews</div>
+        <h2 class="section-title">What our patients say</h2>
+        <p class="section-subtitle">
+          These are example snippets – you can replace them with real Google review text later.
+        </p>
+      </div>
+
+      <div style="text-align:center;margin-bottom:1rem;" data-animate>
+        <div class="google-rating-pill">
+          ⭐ 4.9 / 5 on Google &nbsp;•&nbsp; Patients love our clear explanations & comfort
+        </div>
+        <div style="margin-top:0.4rem;">
+          <a
+            href="https://www.google.com/maps/place/Infinite+Multispeciality+Dent/"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener"
+          >
+            🔍 View all reviews on Google
+          </a>
+        </div>
+      </div>
+
+      <div class="reviews-grid" data-animate>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">
+            “Had a re-root canal treatment done and I’m extremely satisfied. Doctor was very caring,
+            patient and explained each step clearly.”
           </div>
-          <div class="testimonial-name">Parent Name</div>
-          <div class="testimonial-meta">Kids dentistry</div>
+          <div class="review-name">Patient Name</div>
+          <div class="review-meta">Root canal treatment</div>
         </div>
 
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            “Got my cleaning and fillings done. The doctor explained all options before starting and
-            the overall experience was smooth.”
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">
+            “The clinic is very clean and modern. My child felt comfortable throughout the visit and
+            was not scared at all.”
           </div>
-          <div class="testimonial-name">Patient Name</div>
-          <div class="testimonial-meta">Cleaning & fillings</div>
+          <div class="review-name">Parent Name</div>
+          <div class="review-meta">Kids dentistry</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">
+            “Got my cleaning and fillings done here. The doctor took time to answer all my questions
+            and the procedure was painless.”
+          </div>
+          <div class="review-name">Patient Name</div>
+          <div class="review-meta">Cleaning & fillings</div>
         </div>
       </div>
     </div>
@@ -1185,7 +1154,7 @@
   <!-- Contact / Map -->
   <section id="contact">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <div class="section-kicker">Visit or contact</div>
         <h2 class="section-title">Book your appointment</h2>
         <p class="section-subtitle">
@@ -1195,7 +1164,7 @@
       </div>
 
       <div class="contact-grid">
-        <div class="contact-card">
+        <div class="contact-card" data-animate>
           <ul class="contact-list">
             <li>
               <strong>Phone</strong>
@@ -1210,12 +1179,6 @@
               </span>
             </li>
             <li>
-              <strong>Email</strong>
-              <span>
-                <a href="mailto:infinitedent2025@gmail.com">infinitedent2025@gmail.com</a>
-              </span>
-            </li>
-            <li>
               <strong>Address</strong>
               <span>
                 2nd Floor, ITI Muniyappa Building,<br />
@@ -1223,14 +1186,13 @@
                 Bengaluru, Karnataka 560067
               </span>
             </li>
+            <li>
+              <strong>Timings</strong>
+              <span>Monday – Sunday, 9:30 AM – 8:30 PM</span>
+            </li>
           </ul>
 
-          <div class="hours-box">
-            ⏰ <strong>Clinic Hours:</strong> Monday – Sunday, 9:30 AM – 8:30 PM
-          </div>
-
           <form
-            style="margin-top:0.9rem;"
             onsubmit="alert('This is a static demo form. Connect it to a backend service or Google Form to receive enquiries.'); return false;"
           >
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;">
@@ -1286,7 +1248,7 @@
               ></textarea>
             </div>
 
-            <div style="margin-top:0.85rem;display:flex;flex-wrap:wrap;gap:0.55rem;align-items:center;">
+            <div style="margin-top:0.8rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
               <button type="submit" class="btn btn-primary">
                 📩 Send Enquiry
               </button>
@@ -1297,8 +1259,7 @@
           </form>
         </div>
 
-        <div class="map-frame">
-          <!-- Simple Google Maps embed using a search query -->
+        <div class="map-frame" data-animate>
           <iframe
             loading="lazy"
             allowfullscreen
@@ -1317,19 +1278,79 @@
     </div>
   </footer>
 
-  <!-- Mobile sticky action bar -->
-  <div class="mobile-bar">
-    <div class="mobile-bar-inner">
-      <a href="tel:+918050029791" class="btn btn-primary">
-        📞 Call
-      </a>
-      <a href="https://wa.me/918050029791" target="_blank" rel="noopener" class="btn btn-outline">
-        💬 WhatsApp
-      </a>
-      <a href="#contact" class="btn btn-outline">
-        📅 Book
-      </a>
-    </div>
-  </div>
+  <!-- Scripts: mobile nav, animations, gallery slider -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => navLinks.classList.remove("show"));
+      });
+    }
+
+    // Scroll animations
+    const animateEls = document.querySelectorAll("[data-animate]");
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    animateEls.forEach(el => io.observe(el));
+
+    // Gallery slider (SL1)
+    const slides = document.querySelectorAll(".gallery-slide");
+    const dots = document.querySelectorAll(".gallery-dot");
+    const prevBtn = document.querySelector(".gallery-nav.prev");
+    const nextBtn = document.querySelector(".gallery-nav.next");
+
+    let current = 0;
+    let autoTimer = null;
+
+    function showSlide(index) {
+      if (!slides.length) return;
+      current = (index + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        s.classList.toggle("active", i === current);
+      });
+      dots.forEach((d, i) => {
+        d.classList.toggle("active", i === current);
+      });
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+
+    if (nextBtn) nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetAuto();
+    });
+    if (prevBtn) prevBtn.addEventListener("click", () => {
+      prevSlide();
+      resetAuto();
+    });
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        showSlide(i);
+        resetAuto();
+      });
+    });
+
+    function startAuto() {
+      autoTimer = setInterval(nextSlide, 6000);
+    }
+    function resetAuto() {
+      clearInterval(autoTimer);
+      startAuto();
+    }
+    startAuto();
+  </script>
 </body>
 </html>
