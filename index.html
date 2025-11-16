@@ -1217,10 +1217,29 @@
   </div>
 
   <div style="margin-top:0.6rem;">
-    <label style="font-size:0.8rem;">Treatment / Concern</label>
-    <input type="text" name="treatment" placeholder="E.g. tooth pain, cleaning, RCT"
-      style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
-  </div>
+  <label style="font-size:0.8rem;">Treatment / Concern</label>
+  <select name="treatment" required
+    style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;">
+    <option value="" disabled selected>Select a concern</option>
+
+    <option value="Tooth Pain / Sensitivity">Tooth Pain / Sensitivity</option>
+    <option value="Root Canal Treatment (RCT)">Root Canal Treatment (RCT)</option>
+    <option value="Tooth Filling / Cavity">Tooth Filling / Cavity</option>
+    <option value="Cleaning & Polishing">Cleaning & Polishing</option>
+    <option value="Kids Dental Check-up">Kids Dental Check-up</option>
+    <option value="Wisdom Tooth Pain / Extraction">Wisdom Tooth Pain / Extraction</option>
+    <option value="Gum Problem / Bleeding Gums">Gum Problem / Bleeding Gums</option>
+    <option value="Dental Consultation / General Check-up">Dental Consultation / General Check-up</option>
+    <option value="Dental X-Ray">Dental X-Ray</option>
+    <option value="Smile Correction / Cosmetic Dentistry">Smile Correction / Cosmetic Dentistry</option>
+    <option value="Teeth Whitening">Teeth Whitening</option>
+    <option value="Braces / Aligners">Braces / Aligners</option>
+    <option value="Dental Crowns / Bridges">Dental Crowns / Bridges</option>
+    <option value="Dental Implants (Consultation)">Dental Implants (Consultation)</option>
+
+    <option value="Other">Other (Please specify in message)</option>
+  </select>
+</div>
 
   <div style="margin-top:0.6rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:0.6rem;">
   <div>
@@ -1371,7 +1390,7 @@
    const data = {
   name: form.name.value,
   mobile: form.phone.value,
-  treatment: form.treatment?.value || "",  // safe if treatment field missing
+  treatment: form.treatment.value,   // <-- THIS WORKS FOR DROPDOWN TOO
   preferredDate: form["preferred-date"].value,
   preferredTime: form["preferred-time"].value,
   message: form.message.value
