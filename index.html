@@ -1202,71 +1202,48 @@
             </li>
           </ul>
 
-          <form
-            onsubmit="alert('This is a static demo form. Connect it to a backend service or Google Form to receive enquiries.'); return false;"
-          >
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;">
-              <div>
-                <label style="font-size:0.8rem;">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your full name"
-                  required
-                  style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;"
-                />
-              </div>
-              <div>
-                <label style="font-size:0.8rem;">Mobile</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="10-digit number"
-                  required
-                  style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;"
-                />
-              </div>
-            </div>
+          <form id="enquiryForm">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;">
+    <div>
+      <label style="font-size:0.8rem;">Name</label>
+      <input type="text" name="name" placeholder="Your full name" required
+        style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
+    </div>
+    <div>
+      <label style="font-size:0.8rem;">Mobile</label>
+      <input type="tel" name="phone" placeholder="10-digit number" required
+        style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
+    </div>
+  </div>
 
-            <div style="margin-top:0.6rem;">
-              <label style="font-size:0.8rem;">Treatment / Concern</label>
-              <input
-                type="text"
-                name="treatment"
-                placeholder="E.g. tooth pain, cleaning, RCT"
-                style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;"
-              />
-            </div>
+  <div style="margin-top:0.6rem;">
+    <label style="font-size:0.8rem;">Treatment / Concern</label>
+    <input type="text" name="treatment" placeholder="E.g. tooth pain, cleaning, RCT"
+      style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
+  </div>
 
-            <div style="margin-top:0.6rem;">
-              <label style="font-size:0.8rem;">Preferred date & time</label>
-              <input
-                type="text"
-                name="preferred-time"
-                placeholder="E.g. Saturday evening"
-                style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;"
-              />
-            </div>
+  <div style="margin-top:0.6rem;">
+    <label style="font-size:0.8rem;">Preferred date & time</label>
+    <input type="text" name="preferred-time" placeholder="E.g. Saturday evening"
+      style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
+  </div>
 
-            <div style="margin-top:0.6rem;">
-              <label style="font-size:0.8rem;">Message</label>
-              <textarea
-                name="message"
-                rows="3"
-                placeholder="Share any details you’d like the doctor to know in advance."
-                style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;resize:vertical;"
-              ></textarea>
-            </div>
+  <div style="margin-top:0.6rem;">
+    <label style="font-size:0.8rem;">Message</label>
+    <textarea name="message" rows="3" placeholder="Share any details you’d like the doctor to know in advance."
+      style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;resize:vertical;"></textarea>
+  </div>
 
-            <div style="margin-top:0.8rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
-              <button type="submit" class="btn btn-primary">
-                📩 Send Enquiry
-              </button>
-              <small style="color:var(--muted);font-size:0.75rem;">
-                We’ll confirm your appointment timing over call or WhatsApp.
-              </small>
-            </div>
-          </form>
+  <div style="margin-top:0.8rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
+    <button type="submit" class="btn btn-primary">
+      📩 Send Enquiry
+    </button>
+    <small style="color:var(--muted);font-size:0.75rem;">
+      We’ll confirm your appointment timing over call or WhatsApp.
+    </small>
+  </div>
+</form>
+
         </div>
 
         <div class="map-frame" data-animate>
@@ -1376,5 +1353,38 @@
 
     startGalleryAuto();
   </script>
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbz4rAVJA-W59G6Km175ECdEjJTVBNbgWlmxp5iGJZg9rgtAoYcFd-9kdvKp-vYaSF5T/exec";
+
+  document.getElementById("enquiryForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      mobile: form.phone.value,
+      treatment: form.treatment.value,
+      preferredTime: form["preferred-time"].value,
+      message: form.message.value
+    };
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert("Thank you! Your enquiry has been sent successfully.");
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Error sending enquiry. Please WhatsApp or call us.");
+    }
+  });
+</script>
 </body>
 </html>
