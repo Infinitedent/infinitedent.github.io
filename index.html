@@ -1222,11 +1222,19 @@
       style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
   </div>
 
-  <div style="margin-top:0.6rem;">
-    <label style="font-size:0.8rem;">Preferred date & time</label>
-    <input type="text" name="preferred-time" placeholder="E.g. Saturday evening"
+  <div style="margin-top:0.6rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:0.6rem;">
+  <div>
+    <label style="font-size:0.8rem;">Preferred Date</label>
+    <input type="date" name="preferred-date" required
       style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
   </div>
+
+  <div>
+    <label style="font-size:0.8rem;">Preferred Time</label>
+    <input type="time" name="preferred-time" required
+      style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
+  </div>
+</div>
 
   <div style="margin-top:0.6rem;">
     <label style="font-size:0.8rem;">Message</label>
@@ -1361,12 +1369,13 @@
 
     const form = e.target;
     const data = {
-      name: form.name.value,
-      mobile: form.phone.value,
-      treatment: form.treatment.value,
-      preferredTime: form["preferred-time"].value,
-      message: form.message.value
-    };
+  name: form.name.value,
+  mobile: form.phone.value,
+  treatment: form.treatment.value,
+  preferredDate: form["preferred-date"].value,
+  preferredTime: form["preferred-time"].value,
+  message: form.message.value
+};
 
     try {
       const response = await fetch(scriptURL, {
