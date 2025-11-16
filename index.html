@@ -1225,7 +1225,7 @@
   <div style="margin-top:0.6rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:0.6rem;">
   <div>
     <label style="font-size:0.8rem;">Preferred Date</label>
-    <input type="date" name="preferred-date" required
+    <input type="date" name="preferred-date"  min="" required
       style="width:100%;padding:0.45rem 0.6rem;border-radius:0.7rem;border:1px solid #d1d5db;font-size:0.85rem;margin-top:0.2rem;" />
   </div>
 
@@ -1393,6 +1393,57 @@
     } catch (error) {
       alert("Error sending enquiry. Please WhatsApp or call us.");
     }
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dateInput = document.querySelector('input[name="preferred-date"]');
+    const timeInput = document.querySelector('input[name="preferred-time"]');
+
+    function getNextSlot() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+
+      minutes = minutes <= 30 ? 30 : 60;
+      if (minutes === 60) {
+        minutes = 0;
+        hours += 1;
+      }
+
+      const hh = String(hours).padStart(2, "0");
+      const mm = String(minutes).padStart(2, "0");
+
+      return `${hh}:${mm}`;
+    }
+
+    function updateTimeForToday() {
+      const today = new Date().toISOString().split("T")[0];
+      const selectedDate = dateInput.value;
+
+      if (selectedDate === today) {
+        const nextSlot = getNextSlot();
+        timeInput.min = nextSlot;
+
+        if (nextSlot >= "09:30" && nextSlot <= "20:30") {
+          timeInput.value = nextSlot;
+        } else {
+          timeInput.value = "";
+        }
+      } else {
+        timeInput.min = "09:30";
+        if (!timeInput.value) timeInput.value = "09:30";
+      }
+    }
+
+    dateInput.addEventListener("change", updateTimeForToday);
+
+    // NEW CODE: Prevent past dates + auto-select today
+    const todayStr = new Date().toISOString().split("T")[0];
+    dateInput.min = todayStr;
+    dateInput.value = todayStr;
+
+    updateTimeForToday();
   });
 </script>
 </body>
